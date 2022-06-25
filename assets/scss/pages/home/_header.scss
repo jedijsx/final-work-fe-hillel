@@ -1,2 +1,23 @@
  @use "../../presets" as *;
 @use "../../mixins" as *;
+
+
+.page-header {
+  background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+  
+  &__grid {
+    position: absolute;
+    background-color: $color-black;
+  }
+
+  &__content {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-title {
+      position: absolute;
+    }
+  }
+}
