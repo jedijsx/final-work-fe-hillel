@@ -1,0 +1,11 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.menu {
+  &__list {
+    @include unlist;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+  }
+}

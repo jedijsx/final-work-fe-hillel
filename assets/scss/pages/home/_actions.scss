@@ -1,0 +1,15 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.actions {
+  display: flex;
+  gap: 30px;
+  justify-content: flex-end;
+  align-items: center;
+
+  &__languages {
+    display: flex;
+    gap: 16px;
+
+  }
+}

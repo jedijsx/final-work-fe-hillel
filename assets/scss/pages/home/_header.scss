@@ -1,13 +1,34 @@
- @use "../../presets" as *;
+@use "../../presets" as *;
 @use "../../mixins" as *;
 
 
 .page-header {
-  background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
-  
-  &__grid {
+  background: $gradient-soft;
+
+  &__wrap {
     position: absolute;
-    background-color: $color-black;
+    padding-top: 50px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "logo actions" "logo menu";
+    gap: $gap;
+
+    @extend %container; 
+  }
+
+  &__logo {
+    grid-area: logo; 
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__actions {
+    grid-area: actions;
   }
 
   &__content {
@@ -18,6 +39,11 @@
 
     &-title {
       position: absolute;
+      max-width: 800px;
+      font-weight: 500;
+      font-size: 38px;
+      text-align: center;
+      color: $color-white;
     }
   }
 }
