@@ -1,5 +1,12 @@
+@use "../presets" as *;
+
 @mixin unlist () {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+@mixin abs-position ($t: 0, $r: 0, $b: 0, $l: 0) {
+  position: absolute;
+  inset: $t $r $b $l;
 }

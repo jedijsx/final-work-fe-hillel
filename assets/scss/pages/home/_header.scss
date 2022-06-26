@@ -5,22 +5,48 @@
 .page-header {
   background: $gradient-soft;
 
+  &::before {
+    @include sm-min {
+      content: "";
+      @include abs-position();
+      background-image: url(../img/pattern.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 100%;
+      background-size: 85vh;
+    }
+  }
+
+  &::after {
+    content: "";
+    @include abs-position(70%);
+    background: $gradient-overlay;
+    z-index: 1;
+  }
+
   &__wrap {
     position: absolute;
-    padding-top: 50px;
     top: 0;
     left: 0;
     right: 0;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-areas: "logo actions" "logo menu";
     gap: $gap;
+    z-index: 2;
+    @extend %container;
 
-    @extend %container; 
+    @include sm-min {
+      grid-template-areas: "logo actions""logo menu";
+      padding-top: 50px;
+    }
+
+    @include sm {
+      grid-template-areas: "actions actions""logo menu";
+      padding-top: $gap;
+    }
   }
 
   &__logo {
-    grid-area: logo; 
+    grid-area: logo;
   }
 
   &__menu {
@@ -32,18 +58,35 @@
   }
 
   &__content {
+    position: relative;
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
 
     &-title {
       position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       max-width: 800px;
       font-weight: 500;
       font-size: 38px;
       text-align: center;
       color: $color-white;
     }
+
+    &-image {
+      margin-top: 200px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    z-index: 2;
+    transform: translateX(-50%);
+    bottom: $gap;
   }
 }

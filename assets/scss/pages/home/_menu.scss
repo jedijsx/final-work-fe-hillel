@@ -2,10 +2,20 @@
 @use "../../mixins" as *;
 
 .menu {
+  align-self: center;
+  font-size: 1.125rem;
+
+  &__btn {
+    display: none;
+  }
+
+
   &__list {
     @include unlist;
     display: flex;
     gap: 15px;
     justify-content: flex-end;
+    font-weight: 500;
+    font-size: 18px;
   }
 }

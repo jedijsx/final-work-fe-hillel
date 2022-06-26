@@ -3,13 +3,50 @@
 
 .actions {
   display: flex;
-  gap: 30px;
-  justify-content: flex-end;
+  gap: $gap;
   align-items: center;
+
+  @include sm-min {
+    justify-content: flex-end;
+  }
+
+  @include sm {
+    justify-content: space-between;
+  }
 
   &__languages {
     display: flex;
-    gap: 16px;
+    gap: 2px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+  }
 
+  &__language-link {
+    display: block;
+    padding: 5px 6px;
+    border-radius: 8px;
+
+    &.active {
+      background-color: $color-accent;
+    }
+  }
+
+  &__locations {
+    @include sm {
+      display: none;
+    }
+  }
+
+  &__phone-url {
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  &__socials {
+    @include sm {
+      display: none;
+    }
   }
 }
