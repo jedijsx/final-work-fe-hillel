@@ -12,6 +12,9 @@
 
   @include sm {
     justify-content: space-between;
+    a {
+      color: $color-text;
+    }
   }
 
   &__languages {
@@ -30,6 +33,7 @@
 
     &.active {
       background-color: $color-accent;
+      color: $color-white;
     }
   }
 

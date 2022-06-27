@@ -363,6 +363,27 @@ html {
 body {
   line-height: 1.2;
   font-weight: 400;
+  -webkit-transition: -webkit-transform 0.31s;
+  transition: -webkit-transform 0.31s;
+  -o-transition: transform 0.31s;
+  transition: transform 0.31s;
+  transition: transform 0.31s, -webkit-transform 0.31s;
+}
+body.active {
+  overflow: hidden;
+  -webkit-transform: translateX(-240px);
+      -ms-transform: translateX(-240px);
+          transform: translateX(-240px);
+}
+body.active::before {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  background-color: rgba(50, 50, 100, 0.7);
 }
 
 a {
@@ -418,6 +439,7 @@ h1 {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  overflow: hidden;
 }
 .page-header__content-title {
   position: absolute;
@@ -426,7 +448,7 @@ h1 {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-width: 800px;
+  max-width: 600px;
   font-weight: 500;
   font-size: 38px;
   text-align: center;
@@ -452,21 +474,70 @@ h1 {
   font-size: 1.125rem;
 }
 .menu__btn {
+  position: relative;
+  width: 30px;
+  height: 22.5px;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  margin-left: auto;
+}
+.menu__btn-row {
+  left: 0;
   display: none;
+  width: 100%;
+  height: 3px;
+  -webkit-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+  opacity: 1;
+}
+.menu__btn-row:nth-child(1) {
+  top: 0;
+  background-color: #ffffff;
+}
+.menu__btn-row:nth-child(2), .menu__btn-row:nth-child(3) {
+  top: 9px;
+  background-color: #ffffff;
+}
+.menu__btn-row:nth-child(4) {
+  top: 18px;
+  background-color: #ffffff;
+}
+.menu__btn.active span:nth-child(1) {
+  top: 9px;
+  left: 50%;
+  width: 0;
+}
+.menu__btn.active span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.menu__btn.active span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.menu__btn.active span:nth-child(4) {
+  top: 9px;
+  left: 50%;
+  width: 0;
 }
 .menu__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 15px;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  font-weight: 500;
-  font-size: 18px;
+}
+.menu__link {
+  display: block;
 }
 
 .actions {
@@ -495,6 +566,7 @@ h1 {
 }
 .actions__language-link.active {
   background-color: #f0145a;
+  color: #ffffff;
 }
 .actions__phone-url {
   font-weight: 700;
@@ -514,6 +586,17 @@ h1 {
     grid-template-areas: "logo actions" "logo menu";
     padding-top: 50px;
   }
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 15px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    font-weight: 500;
+    font-size: 18px;
+  }
   .actions {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
@@ -525,10 +608,38 @@ h1 {
     grid-template-areas: "actions actions" "logo menu";
     padding-top: 20px;
   }
+  .page-header__logo-picture {
+    width: 76px;
+  }
+  .menu__btn-row {
+    position: absolute;
+    display: block;
+  }
+  .menu__list {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: -240px;
+    width: 240px;
+    height: 100vh;
+    padding: 20px;
+    background-color: #46466e;
+    -webkit-box-shadow: -10px 0 15px rgba(0, 0, 0, 0.12);
+            box-shadow: -10px 0 15px rgba(0, 0, 0, 0.12);
+  }
+  .menu__list.active {
+    display: block;
+  }
+  .menu__link {
+    margin: 20px 0;
+  }
   .actions {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+  .actions a {
+    color: #b3b3ba;
   }
   .actions__locations {
     display: none;
