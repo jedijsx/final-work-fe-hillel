@@ -1,5 +1,5 @@
-@use "../../presets" as *;
-@use "../../mixins" as *;
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
 
 .menu {
   align-self: center;
@@ -73,8 +73,9 @@
 
     @include sm-min {
       display: flex;
-      gap: 15px;
+      align-items: center;
       justify-content: flex-end;
+      gap: 15px;
       font-weight: 500;
       font-size: 18px;
     }
@@ -89,6 +90,7 @@
       padding: $gap;
       background-color: $color-main-alt;
       box-shadow: -10px 0 15px rgba($color-black, 0.12);
+      overflow: hidden;
 
       &.active {
         display: block;

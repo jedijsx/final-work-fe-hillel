@@ -363,11 +363,11 @@ html {
 body {
   line-height: 1.2;
   font-weight: 400;
-  -webkit-transition: -webkit-transform 0.31s;
-  transition: -webkit-transform 0.31s;
-  -o-transition: transform 0.31s;
-  transition: transform 0.31s;
-  transition: transform 0.31s, -webkit-transform 0.31s;
+  -webkit-transition: -webkit-transform 0.26s;
+  transition: -webkit-transform 0.26s;
+  -o-transition: transform 0.26s;
+  transition: transform 0.26s;
+  transition: transform 0.26s, -webkit-transform 0.26s;
 }
 body.active {
   overflow: hidden;
@@ -376,13 +376,13 @@ body.active {
           transform: translateX(-240px);
 }
 body.active::before {
+  content: "";
   position: absolute;
   z-index: 2;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  content: "";
   background-color: rgba(50, 50, 100, 0.7);
 }
 
@@ -396,27 +396,28 @@ h1 {
 }
 
 .page-header {
+  position: relative;
   background: -o-linear-gradient(47.99deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
   background: linear-gradient(42.01deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
 }
 .page-header::after {
-  content: "";
+  z-index: 1;
   position: absolute;
   inset: 70% 0 0 0;
+  content: "";
   background: -webkit-gradient(linear, left top, left bottom, color-stop(16.67%, rgba(50, 50, 100, 0)), to(#323264));
   background: -o-linear-gradient(top, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
   background: linear-gradient(180deg, rgba(50, 50, 100, 0) 16.67%, #323264 100%);
-  z-index: 1;
 }
 .page-header__wrap {
   position: absolute;
+  z-index: 2;
   top: 0;
   left: 0;
   right: 0;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 20px;
-  z-index: 2;
 }
 .page-header__logo {
   grid-area: logo;
@@ -429,6 +430,7 @@ h1 {
 }
 .page-header__content {
   position: relative;
+  z-index: 1;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -436,36 +438,41 @@ h1 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: hidden;
 }
 .page-header__content-title {
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  max-width: 600px;
   font-weight: 500;
+  line-height: 45px;
   font-size: 38px;
   text-align: center;
   color: #ffffff;
 }
 .page-header__content-image {
-  margin-top: 200px;
+  -webkit-transform: translateY(30%);
+      -ms-transform: translateY(30%);
+          transform: translateY(30%);
 }
 .page-header__button {
   position: absolute;
-  left: 50%;
-  bottom: 0;
   z-index: 2;
+  bottom: 20px;
+  left: 50%;
+  cursor: pointer;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: 20px;
 }
 
 .menu {
@@ -544,10 +551,10 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 20px;
 }
 .actions__languages {
   display: -webkit-box;
@@ -574,13 +581,13 @@ h1 {
 }
 @media (min-width: 768px) {
   .page-header::before {
-    content: "";
     position: absolute;
     inset: 0 0 0 0;
-    background-image: url(../img/pattern.svg);
-    background-repeat: no-repeat;
+    content: "";
     background-position: 50% 100%;
     background-size: 85vh;
+    background-image: url(../img/header/pattern.svg);
+    background-repeat: no-repeat;
   }
   .page-header__wrap {
     grid-template-areas: "logo actions" "logo menu";
@@ -590,10 +597,13 @@ h1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 15px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    gap: 15px;
     font-weight: 500;
     font-size: 18px;
   }
@@ -626,6 +636,7 @@ h1 {
     background-color: #46466e;
     -webkit-box-shadow: -10px 0 15px rgba(0, 0, 0, 0.12);
             box-shadow: -10px 0 15px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
   }
   .menu__list.active {
     display: block;

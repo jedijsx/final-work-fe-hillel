@@ -17,20 +17,20 @@ html {
 body {
   line-height: 1.2;
   font-weight: 400;
-  transition: transform 0.31s;
+  transition: transform 0.26s;
 
   &.active {
     overflow: hidden;
     transform: translateX(-$mobile-menu-size);
 
     &::before {
+      content: "";
       position: absolute;
       z-index: 2;
       top: 0;
       left: 0;
       width: 100vw;
       height: 100vh;
-      content: "";
       background-color: rgba($color-main, 0.7);
     }
   }
