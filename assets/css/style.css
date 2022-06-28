@@ -338,7 +338,7 @@ template {
 /* md */
 /* sm */
 /* xs */
-.page-header__wrap {
+.experience__container, .page-header__wrap {
   max-width: 1360px;
   margin-left: auto;
   margin-right: auto;
@@ -578,6 +578,19 @@ h1 {
 .actions__phone-url {
   font-weight: 700;
   white-space: nowrap;
+}
+
+.experience {
+  background-color: #323264;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff;
+  gap: 80px;
 }
 @media (min-width: 768px) {
   .page-header::before {

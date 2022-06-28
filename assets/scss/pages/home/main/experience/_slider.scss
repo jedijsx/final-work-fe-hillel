@@ -1,0 +1,8 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.slider {
+  display: flex;
+  color: $color-white;
+  gap: 80px;
+}
