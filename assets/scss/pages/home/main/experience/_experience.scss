@@ -7,6 +7,15 @@
   padding-top: 80px;
   padding-bottom: 80px;
 
+  @include md-min {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  @include md {
+    padding-top: 40px;
+    padding-bottom: 45px;
+  }
+
   &__container {
     @extend %container;
   }

@@ -1,8 +1,148 @@
 @use "../../../../presets" as *;
 @use "../../../../mixins" as *;
 
+$size: 16px;
+
 .slider {
   display: flex;
-  color: $color-white;
-  gap: 80px;
+
+  @include md-min {
+    gap: 80px;
+  }
+
+  @include md {
+    flex-direction: column;
+  }
+
+  &__headers {
+    position: relative;
+    display: flex;
+    flex-basis: 0;
+    flex-direction: column;
+    flex-grow: 2;
+    gap: $gap;
+
+    @include md-min {
+      &::after {
+        position: absolute;
+        right: -42px;
+        width: 4px;
+        height: 100%;
+        content: "";
+        background-color: $color-separator;
+      }
+    }
+  }
+
+  &__header {
+    position: relative;
+    user-select: none;
+    color: $color-text;
+    font-weight: 700;
+
+    @include md-min {
+      text-align: right;
+      font-size: 42px;
+    }
+
+    @include md {
+      display: none;
+      width: min-content;
+      margin-bottom: 10px;
+      white-space: nowrap;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    &.active {
+      @extend %text-liner-gradient;
+
+      @include md-min {
+        &::after {
+          position: absolute;
+          z-index: 2;
+          right: -42px;
+          width: 4px;
+          height: 100%;
+          content: "";
+          background-color: $color-accent;
+        }
+      }
+
+      @include md {
+        display: block;
+      }
+    }
+  }
+
+  &__notes {
+    display: flex;
+    align-items: center;
+    flex-basis: 0;
+    flex-grow: 3;
+    color: $color-white;
+  }
+
+  &__note {
+    position: absolute;
+    z-index: -100;
+    opacity: 0;
+
+    &.active {
+      position: static;
+      z-index: inherit;
+      opacity: 1;
+    }
+  }
+
+  &__title {
+    margin-bottom: $gap;
+    font-weight: 500;
+
+    @include md-min {
+      font-size: 32px;
+    }
+
+    @include md {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+  }
+
+  &__description {
+    line-height: 1.43;
+
+    @include md-min {
+      font-size: 21px;
+    }
+
+    @include md {
+      margin-bottom: $gap;
+      font-size: 18px;
+    }
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  &__indicator {
+    width: $size;
+    height: $size;
+
+    opacity: 0.2;
+    border-radius: $size * 0.5;
+    background-color: $color-active;
+
+    @include md-min {
+      display: none;
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
 }

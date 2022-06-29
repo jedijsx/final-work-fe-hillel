@@ -7,3 +7,12 @@
   padding-left: $gap;
   padding-right: $gap;
 }
+
+%text-liner-gradient {
+  background: $gradient-red-text;
+  -webkit-background-clip: text;
+          background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+}
