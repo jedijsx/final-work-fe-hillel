@@ -16,3 +16,12 @@
   -webkit-text-fill-color: transparent;
           text-fill-color: transparent;
 }
+
+%text-liner-gradient-reversed {
+  background: $gradient-red-text-reversed;
+  -webkit-background-clip: text;
+          background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+          text-fill-color: transparent;
+}

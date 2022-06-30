@@ -346,10 +346,18 @@ template {
   padding-right: 20px;
 }
 
-.services__title, .slider__header.active {
-  background: -webkit-gradient(linear, left top, right top, color-stop(35%, #ef8080), to(#f0145a));
-  background: -o-linear-gradient(left, #ef8080 35%, #f0145a 100%);
-  background: linear-gradient(90deg, #ef8080 35%, #f0145a 100%);
+.services__title {
+  background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+}
+
+.slider__header.active {
+  background: -o-linear-gradient(359.87deg, #EF8080 0.84%, #F0145A 99.96%);
+  background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -679,8 +687,9 @@ h1 {
 .services {
   position: relative;
   border-radius: 0 0 12px 12px;
-  background: -o-linear-gradient(221.43deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  background: -o-linear-gradient(230.43deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  background: linear-gradient(219.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  padding-top: 20px;
 }
 .services::before {
   position: absolute;
@@ -723,7 +732,7 @@ h1 {
 }
 .services__grid {
   display: grid;
-  gap: 40px;
+  gap: 60px;
 }
 
 .service-item {

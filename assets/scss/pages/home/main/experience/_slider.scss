@@ -56,7 +56,7 @@ $size: 16px;
     }
 
     &.active {
-      @extend %text-liner-gradient;
+      @extend %text-liner-gradient-reversed;
 
       @include md-min {
         &::after {
