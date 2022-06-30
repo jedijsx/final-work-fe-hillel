@@ -1,0 +1,68 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.employee {
+  display: flex;
+  background-color: $color-bg;
+  border-radius: 12px;
+  gap: 40px;
+
+  &__photo {
+    display: flex;
+    height: 500px;
+    width: 413px;
+
+    &__image {
+
+    }
+  }
+
+  &__description {
+    padding: 40px 30px 20px 0px;
+
+    &-subheader {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      margin-bottom: 5px;
+    }
+
+    &-link {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      color: $color-active;
+    }
+
+    &-arrow {
+      width: 12px;
+      height: 12px;
+    }
+
+    &-quote {
+      @extend %text-liner-gradient;
+
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 50px;
+      margin-bottom: 20px;
+    }
+
+    &-name {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.2;
+      color: $color-text;
+      margin-bottom: 5px;
+    }
+
+    &-position {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.2;
+      color: $color-text;
+    }
+  }
+}

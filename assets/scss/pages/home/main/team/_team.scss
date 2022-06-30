@@ -1,0 +1,35 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+$size: 16px;
+
+.team {
+  @extend %container;
+
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+  }
+  
+  &__indicator {
+    width: $size;
+    height: $size;
+    opacity: 0.2;
+    border-radius: $size * 0.5;
+    background-color: $color-active;
+  
+    &.active {
+      opacity: 1;
+    }
+  }
+}

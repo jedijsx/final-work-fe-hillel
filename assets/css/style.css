@@ -338,7 +338,7 @@ template {
 /* md */
 /* sm */
 /* xs */
-.services__container, .experience__container, .page-header__wrap {
+.team, .services__container, .experience__container, .page-header__wrap {
   max-width: 1360px;
   margin-left: auto;
   margin-right: auto;
@@ -346,13 +346,13 @@ template {
   padding-right: 20px;
 }
 
-.services__title {
+.employee__description-quote, .services__title {
   background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .slider__header.active {
@@ -361,7 +361,7 @@ template {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 *,
@@ -749,6 +749,100 @@ h1 {
 .service-item__description {
   color: #ffffff;
   line-height: 1.44;
+}
+
+.team {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+.team__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.team__indicators {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 14px;
+}
+.team__indicator {
+  width: 16px;
+  height: 16px;
+  opacity: 0.2;
+  border-radius: 8px;
+  background-color: #24a3ff;
+}
+.team__indicator.active {
+  opacity: 1;
+}
+
+.employee {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f5f5fa;
+  border-radius: 12px;
+  gap: 40px;
+}
+.employee__photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 500px;
+  width: 413px;
+}
+.employee__description {
+  padding: 40px 30px 20px 0px;
+}
+.employee__description-subheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2px;
+  margin-bottom: 5px;
+}
+.employee__description-link {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  color: #24a3ff;
+}
+.employee__description-arrow {
+  width: 12px;
+  height: 12px;
+}
+.employee__description-quote {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 50px;
+  margin-bottom: 20px;
+}
+.employee__description-name {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2;
+  color: #b3b3ba;
+  margin-bottom: 5px;
+}
+.employee__description-position {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #b3b3ba;
 }
 @media (min-width: 768px) {
   .page-header::before {
