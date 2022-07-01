@@ -797,7 +797,9 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 500px;
+}
+.employee__photo-image {
+  height: auto;
   width: 413px;
 }
 .employee__description {
@@ -828,21 +830,39 @@ h1 {
 .employee__description-quote {
   font-weight: 700;
   font-size: 42px;
-  line-height: 50px;
+  line-height: 1.1;
   margin-bottom: 20px;
 }
-.employee__description-name {
+.employee__data {
+  display: grid;
+  grid-template-areas: "ava name" "ava position";
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.employee__data-ava {
+  display: none;
+  grid-area: ava;
+}
+.employee__data-name {
   font-weight: 500;
   font-size: 18px;
   line-height: 1.2;
   color: #b3b3ba;
   margin-bottom: 5px;
+  grid-area: name;
+  padding-top: 4px;
 }
-.employee__description-position {
+.employee__data-position {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.2;
   color: #b3b3ba;
+  grid-area: position;
+  padding-bottom: 4px;
 }
 @media (min-width: 768px) {
   .page-header::before {
@@ -993,6 +1013,12 @@ h1 {
     margin-bottom: 20px;
     font-size: 18px;
   }
+  .employee__photo-image {
+    width: 313px;
+  }
+  .employee__description-quote {
+    font-size: 28px;
+  }
 }
 @media (max-width: 767.8px) {
   .page-header__wrap {
@@ -1052,5 +1078,22 @@ h1 {
   }
   .service-item__title {
     font-size: 18px;
+  }
+  .employee {
+    gap: 20px;
+  }
+  .employee__photo-image {
+    display: none;
+  }
+  .employee__data {
+    -webkit-column-gap: 10px;
+       -moz-column-gap: 10px;
+            column-gap: 10px;
+  }
+  .employee__data-ava {
+    display: block;
+  }
+  .employee__data-name {
+    font-size: 16px;
   }
 }

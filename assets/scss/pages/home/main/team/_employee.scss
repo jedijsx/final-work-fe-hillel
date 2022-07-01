@@ -7,13 +7,24 @@
   border-radius: 12px;
   gap: 40px;
 
+  @include sm {
+    gap: 20px;
+  }
+
   &__photo {
     display: flex;
-    height: 500px;
-    width: 413px;
 
-    &__image {
+    &-image {
+      height: auto;
+      width: 413px;
 
+      @include md {
+        width: 313px;
+      }
+
+      @include sm {
+        display: none;
+      }
     }
   }
 
@@ -46,8 +57,32 @@
 
       font-weight: 700;
       font-size: 42px;
-      line-height: 50px;
+      line-height: 1.1;
       margin-bottom: 20px;
+
+      @include md {
+        font-size: 28px;
+      }
+    }
+  }
+
+  &__data {
+    display: grid;
+    grid-template-areas: "ava name" "ava position";
+    justify-content: start;
+    align-items: center;
+
+    @include sm {
+      column-gap: 10px;
+    }
+    
+    &-ava {
+      display: none;
+      grid-area: ava;
+
+      @include sm {
+        display: block;
+      }
     }
 
     &-name {
@@ -56,6 +91,12 @@
       line-height: 1.2;
       color: $color-text;
       margin-bottom: 5px;
+      grid-area: name;
+      padding-top: 4px;
+
+      @include sm {
+        font-size: 16px;
+      }
     }
 
     &-position {
@@ -63,6 +104,8 @@
       font-size: 16px;
       line-height: 1.2;
       color: $color-text;
+      grid-area: position;
+      padding-bottom: 4px;
     }
   }
 }
