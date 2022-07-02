@@ -338,7 +338,7 @@ template {
 /* md */
 /* sm */
 /* xs */
-.team, .services__container, .experience__container, .page-header__wrap {
+.cases, .team, .services__container, .experience__container, .page-header__wrap {
   max-width: 1360px;
   margin-left: auto;
   margin-right: auto;
@@ -864,6 +864,129 @@ h1 {
   grid-area: position;
   padding-bottom: 4px;
 }
+
+.case {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.case__one {
+  -ms-flex-preferred-size: 431px;
+      flex-basis: 431px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1px;
+}
+.case__one-header {
+  background-color: #f5f5fa;
+  height: 57px;
+  padding: 20px;
+}
+.case__one-link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #f0145a;
+}
+.case__two {
+  background-color: #f5f5fa;
+  -ms-flex-preferred-size: 454px;
+      flex-basis: 454px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.case__three {
+  background-color: #f5f5fa;
+  -ms-flex-preferred-size: 433px;
+      flex-basis: 433px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.case__four {
+  -ms-flex-preferred-size: 320px;
+      flex-basis: 320px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.case__five {
+  -ms-flex-preferred-size: 454px;
+      flex-basis: 454px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.case__six {
+  -ms-flex-preferred-size: 544px;
+      flex-basis: 544px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.case__description {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.case__description-header {
+  font-weight: 500;
+  font-size: 24px;
+  color: #686887;
+}
+.case__description-company {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.44;
+  color: #b3b3ba;
+}
+
+.fr {
+  background-color: #f5f5fa;
+  height: 198px;
+}
+
 @media (min-width: 768px) {
   .page-header::before {
     position: absolute;
@@ -912,6 +1035,7 @@ h1 {
     font-size: 18px;
   }
 }
+
 @media (min-width: 992px) {
   .experience {
     padding-top: 80px;
@@ -956,6 +1080,7 @@ h1 {
     width: max-content;
   }
 }
+
 @media (min-width: 1280px) {
   .services {
     padding-bottom: 100px;
@@ -964,6 +1089,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 1279.8px) {
   .service-item {
     grid-template-columns: auto 1fr;
@@ -972,6 +1098,7 @@ h1 {
     grid-column: 1/span 3;
   }
 }
+
 @media (max-width: 1279.8px) and (min-width: 768px) {
   .services {
     padding-bottom: 50px;
@@ -980,6 +1107,7 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 991.8px) {
   .experience {
     padding-top: 40px;
@@ -1020,6 +1148,7 @@ h1 {
     font-size: 28px;
   }
 }
+
 @media (max-width: 767.8px) {
   .page-header__wrap {
     grid-template-areas: "actions actions" "logo menu";
@@ -1095,5 +1224,22 @@ h1 {
   }
   .employee__data-name {
     font-size: 16px;
+  }
+  .case__description {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .fr {
+    height: 150px;
+  }
+}
+
+@media (max-width: 575.8px) {
+  .case__description-header {
+    font-size: 18px;
+  }
+  .fr {
+    height: 140px;
   }
 }

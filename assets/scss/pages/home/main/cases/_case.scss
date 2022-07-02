@@ -1,0 +1,110 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.case {
+  display: flex;
+  gap: 1px;
+  flex-wrap: wrap;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 30px;
+
+
+  &__one {
+    flex-basis: 431px;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+    &-header {
+      background-color: $color-bg;
+      height: 57px;
+      padding: 20px;
+    }
+
+    &-link {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-accent;
+    }
+  }
+
+  &__two {
+    background-color: $color-bg;
+    flex-basis: 454px;
+    flex-grow: 1;
+    display: flex;
+  }
+
+  &__three {
+    background-color: $color-bg;
+    flex-basis: 433px;
+    flex-grow: 1;
+    display: flex;
+  }
+
+  &__four {
+    flex-basis: 320px;
+    flex-grow: 1;
+    display: flex;
+  }
+
+  &__five {
+    flex-basis: 454px;
+    flex-grow: 1;
+    display: flex;
+  }
+
+  &__six {
+    flex-basis: 544px;
+    flex-grow: 1;
+    display: flex;
+  }
+
+  &__description {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: flex-end;
+
+    @include sm {
+      justify-content: center;
+    }
+
+    &-header {
+      font-weight: 500;
+      font-size: 24px;
+      color: $color-main-soft;
+
+      @include xs {
+        font-size: 18px;
+      }
+    }
+
+    &-company {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.44;
+      color: $color-text;
+    }
+  }
+}
+
+.fr {
+  background-color: $color-bg;
+  height: $size-big;
+
+  @include sm {
+    height: $size-medium;
+  }
+
+  @include xs {
+    height: $size-small;
+  }
+}
