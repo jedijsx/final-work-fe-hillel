@@ -711,24 +711,15 @@ h1 {
   border-radius: 0 0 12px 12px;
   background-color: #cacadb;
 }
-.services__container-subheader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2px;
-}
-.services__container-arrow {
-  width: 12px;
-  height: 12px;
-}
-.services__page-link {
+.services__subheader-link {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
+}
+.services__subheader-arrow {
+  width: 12px;
+  height: 12px;
 }
 .services__grid {
   display: grid;
@@ -802,20 +793,10 @@ h1 {
   height: auto;
   width: 413px;
 }
-.employee__description {
-  padding: 40px 30px 20px 0px;
-}
-.employee__description-subheader {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2px;
+.employee__subheader {
   margin-bottom: 5px;
 }
-.employee__description-link {
+.employee__subheader-link {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
@@ -823,9 +804,12 @@ h1 {
   letter-spacing: 1px;
   color: #24a3ff;
 }
-.employee__description-arrow {
+.employee__subheader-arrow {
   width: 12px;
   height: 12px;
+}
+.employee__description {
+  padding: 40px 30px 20px 0px;
 }
 .employee__description-quote {
   font-weight: 700;
@@ -987,6 +971,25 @@ h1 {
   height: 198px;
 }
 
+.clients__header {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #323264;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.clients__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.clients__grid-logo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media (min-width: 768px) {
   .page-header::before {
     position: absolute;
@@ -1035,7 +1038,6 @@ h1 {
     font-size: 18px;
   }
 }
-
 @media (min-width: 992px) {
   .experience {
     padding-top: 80px;
@@ -1080,7 +1082,6 @@ h1 {
     width: max-content;
   }
 }
-
 @media (min-width: 1280px) {
   .services {
     padding-bottom: 100px;
@@ -1089,7 +1090,6 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
 @media (max-width: 1279.8px) {
   .service-item {
     grid-template-columns: auto 1fr;
@@ -1098,7 +1098,6 @@ h1 {
     grid-column: 1/span 3;
   }
 }
-
 @media (max-width: 1279.8px) and (min-width: 768px) {
   .services {
     padding-bottom: 50px;
@@ -1107,7 +1106,6 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 991.8px) {
   .experience {
     padding-top: 40px;
@@ -1147,8 +1145,10 @@ h1 {
   .employee__description-quote {
     font-size: 28px;
   }
+  .clients__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-
 @media (max-width: 767.8px) {
   .page-header__wrap {
     grid-template-areas: "actions actions" "logo menu";
@@ -1234,12 +1234,14 @@ h1 {
     height: 150px;
   }
 }
-
 @media (max-width: 575.8px) {
   .case__description-header {
     font-size: 18px;
   }
   .fr {
     height: 140px;
+  }
+  .clients__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -10,9 +10,11 @@
   @include lg-min {
     padding-bottom: 100px;
   }
+
   @include lg-sm {
     padding-bottom: 50px;
   }
+
   @include sm {
     padding-bottom: $gap;
   }
@@ -41,24 +43,20 @@
 
   &__container {
     @extend %container;
+  }
 
-    &-subheader {
-      display: flex;
-      align-items: center;
-      gap: 2px;
+  &__subheader {
+    &-link {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba($color-white, 0.5);
+      font-size: 14px;
     }
 
     &-arrow {
       width: 12px;
       height: 12px;
     }
-  }
-
-  &__page-link {
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: rgba($color-white, 0.5);
-    font-size: 14px;
   }
 
   &__grid {
@@ -68,6 +66,7 @@
     @include lg-min {
       grid-template-columns: repeat(3, 1fr);
     }
+
     @include lg-sm {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -75,13 +74,16 @@
 
   &__title {
     @extend %text-liner-gradient;
+
     @include md-min {
       width: max-content;
     }
+
     @include sm-min {
       margin-bottom: 60px;
       font-size: 42px;
     }
+
     @include sm {
       margin-bottom: 40px;
       font-size: 32px;
@@ -103,6 +105,7 @@
       width: 92px;
       height: 92px;
     }
+
     @include sm {
       width: 65px;
       height: 65px;
@@ -117,6 +120,7 @@
     @include sm-min {
       font-size: 24px;
     }
+
     @include sm {
       font-size: 18px;
     }
@@ -129,6 +133,7 @@
     @include sm-min {
       font-size: 18px;
     }
+
     @include lg {
       grid-column: 1 / span 3;
     }
