@@ -338,7 +338,7 @@ template {
 /* md */
 /* sm */
 /* xs */
-.cases, .team, .services__container, .experience__container, .page-header__wrap {
+.publications__container, .cases, .team, .services__container, .experience__container, .page-header__wrap {
   max-width: 1360px;
   margin-left: auto;
   margin-right: auto;
@@ -346,7 +346,7 @@ template {
   padding-right: 20px;
 }
 
-.employee__description-quote, .services__title {
+.content__header-title, .employee__description-quote, .services__title {
   background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
@@ -990,6 +990,121 @@ h1 {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.publications {
+  background-color: #f5f5fa;
+  padding-top: 40px;
+  padding-bottom: 100px;
+  max-height: 872px;
+  overflow: hidden;
+  position: relative;
+}
+.publications::after {
+  z-index: 1;
+  position: absolute;
+  inset: 70% 0 0 0;
+  content: "";
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 245, 250, 0)), color-stop(86.5%, #F5F5FA));
+  background: -o-linear-gradient(top, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
+  background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
+}
+
+.content__header {
+  padding-bottom: 40px;
+}
+.content__header-link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #24a3ff;
+}
+.content__header-title {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.2;
+}
+.content__cards {
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 40px;
+     -moz-column-gap: 40px;
+          column-gap: 40px;
+}
+.content__button {
+  position: absolute;
+  z-index: 2;
+  bottom: 40px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.content__button-btn {
+  background: #24A3FF;
+  -webkit-box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+          box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+  border-radius: 12px;
+  border: none;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  padding: 16px 16px;
+  width: 250px;
+}
+
+.card {
+  max-width: 413px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+.card__img {
+  display: block;
+}
+.card__img-pic {
+  width: 100%;
+  height: 233px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card__body {
+  padding: 20px;
+}
+.card__body-title {
+  font-weight: 500;
+  font-size: 18px;
+  color: #24a3ff;
+}
+.card__body-date {
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #b3b3ba;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.card__body-separator {
+  width: 100%;
+  height: 4px;
+  background-color: #e6e6f0;
+  margin-bottom: 20px;
+}
+.card__body-description {
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+.n-img .card__img {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .page-header::before {
     position: absolute;
@@ -1038,6 +1153,7 @@ h1 {
     font-size: 18px;
   }
 }
+
 @media (min-width: 992px) {
   .experience {
     padding-top: 80px;
@@ -1082,6 +1198,7 @@ h1 {
     width: max-content;
   }
 }
+
 @media (min-width: 1280px) {
   .services {
     padding-bottom: 100px;
@@ -1090,6 +1207,7 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (max-width: 1279.8px) {
   .service-item {
     grid-template-columns: auto 1fr;
@@ -1098,6 +1216,7 @@ h1 {
     grid-column: 1/span 3;
   }
 }
+
 @media (max-width: 1279.8px) and (min-width: 768px) {
   .services {
     padding-bottom: 50px;
@@ -1106,6 +1225,7 @@ h1 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
 @media (max-width: 991.8px) {
   .experience {
     padding-top: 40px;
@@ -1148,7 +1268,13 @@ h1 {
   .clients__grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .content__cards {
+    -webkit-column-count: 2;
+       -moz-column-count: 2;
+            column-count: 2;
+  }
 }
+
 @media (max-width: 767.8px) {
   .page-header__wrap {
     grid-template-areas: "actions actions" "logo menu";
@@ -1234,6 +1360,7 @@ h1 {
     height: 150px;
   }
 }
+
 @media (max-width: 575.8px) {
   .case__description-header {
     font-size: 18px;
@@ -1243,5 +1370,10 @@ h1 {
   }
   .clients__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .content__cards {
+    -webkit-column-count: 1;
+       -moz-column-count: 1;
+            column-count: 1;
   }
 }

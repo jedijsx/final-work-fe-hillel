@@ -1,0 +1,24 @@
+@use "../../../../presets" as *;
+@use "../../../../mixins" as *;
+
+.publications {
+  background-color: $color-bg;
+  padding-top: 40px;
+  padding-bottom: 100px;
+
+  max-height: 872px;
+  overflow: hidden;
+
+  position: relative;
+
+  &__container {
+    @extend %container;
+  }
+
+  &::after {
+    z-index: 1;
+    @include abs-position(70%);
+    content: "";
+    background: $gradient-overlay-soft;
+  }  
+}
