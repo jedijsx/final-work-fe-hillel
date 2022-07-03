@@ -4,7 +4,7 @@
 .actions {
   display: flex;
   align-items: center;
-  gap: $gap;
+  gap: 10px;
 
   @include sm-min {
     justify-content: flex-end;

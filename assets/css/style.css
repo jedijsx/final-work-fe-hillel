@@ -364,18 +364,11 @@ template {
   -webkit-text-fill-color: transparent;
 }
 
-.dot-gray {
+.dot {
   width: 6px;
   height: 6px;
   border-radius: 6px;
   background-color: #b3b3ba;
-}
-
-.dot-white {
-  width: 6px;
-  height: 6px;
-  border-radius: 6px;
-  background-color: #ffffff;
 }
 
 .separator {
@@ -592,7 +585,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 .actions__languages {
   display: -webkit-box;
@@ -1347,10 +1340,7 @@ h1 {
   }
 }
 @media (max-width: 767.8px) {
-  .dot-gray {
-    display: none;
-  }
-  .dot-white {
+  .dot {
     display: none;
   }
   .page-header__wrap {
