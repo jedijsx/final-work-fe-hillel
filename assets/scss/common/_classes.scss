@@ -1,0 +1,30 @@
+@use "../presets" as *;
+@use "../mixins" as *;
+
+.dot-gray {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: $color-text;
+
+  @include sm {
+    display: none;
+  }
+}
+
+.dot-white {
+  width: 6px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: $color-white;
+
+  @include sm {
+    display: none;
+  }
+}
+
+.separator {
+  width: 100%;
+  height: 4px;
+  background-color: $color-separator;
+}

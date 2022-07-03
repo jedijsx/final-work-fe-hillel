@@ -1,0 +1,80 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.page-footer {
+  background-color: $color-bg;
+
+  &__container {
+    @extend %container;
+  }
+
+  &__content {
+    padding-top: 32px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+      flex-direction: column;
+      gap: $gap;
+    }
+
+    &-nav {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 18px;
+      row-gap: 22px;
+      flex-basis: 460px;
+      align-items: center;
+      
+      @include sm {
+        flex-basis: 120px;
+        flex-direction: column;
+      }
+    }
+
+    &-address {
+      font-weight: 500;
+      font-size: 16px;
+      color: $color-main;
+    }
+
+    &-link {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: $color-active;
+    }
+
+    &-social {
+      height: 38px;
+      width: 38px;
+      margin: 0;
+    }
+
+    &-phone {
+      font-weight: 700;
+      font-size: 16px;
+      color: $color-main-alt;
+    }
+
+    &-email {
+      font-weight: 700;
+      font-size: 16px;
+      color: $color-active;
+    }
+
+    &-copy {
+      font-weight: 500;
+      font-size: 16px;
+      color: $color-text;
+
+      @include sm {
+        margin: auto 40px;
+        text-align: center;
+      }
+    }
+  }
+}
