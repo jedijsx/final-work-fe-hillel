@@ -4,11 +4,22 @@
 .member {
   flex-grow: 1;
   max-width: 413px;
+  display: flex;
+  flex-direction: column;
+
+  @include xs {
+    flex-direction: row;
+    column-gap: 20px;
+  }
 
   &__photo {
     max-width: 413px;
     height: auto;
     display: flex;
+
+    @include xs {
+      max-width: 158px;
+    }
 
     &-pic {
       width: 100%;
@@ -23,6 +34,13 @@
     grid-template-areas: "dname dbutton" "dposition dbutton";
     align-items: center;
     row-gap: 5px;
+
+    @include xs {
+      grid-template-areas: "dname" "dposition" "dbutton";
+      align-items: end;
+      row-gap: 0;
+      padding-top: 60px;
+    }
 
     &-name {
       font-weight: 500;

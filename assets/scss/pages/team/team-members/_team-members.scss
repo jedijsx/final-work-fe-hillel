@@ -13,7 +13,7 @@
 
     @include xs {
       font-size: 32px;
-      padding-bottom: 40px;
+      padding-bottom: 20px;
     }
   }
 
@@ -22,5 +22,10 @@
     gap: 40px;
     flex-wrap: wrap;
     justify-content: space-evenly;
+
+    @include xs {
+      gap: 20px;
+    }
+
   }
 }
