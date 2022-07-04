@@ -19,6 +19,10 @@
       gap: $gap;
     }
 
+    @include xs {
+      padding-bottom: 118px;
+    }
+
     &-nav {
       display: flex;
       flex-wrap: wrap;

@@ -1318,7 +1318,7 @@ h1 {
     content: "";
     background-position: 50% 100%;
     background-size: 85vh;
-    background-image: url(../img/header/pattern.svg);
+    background-image: url(../img/home-page/header/pattern.svg);
     background-repeat: no-repeat;
   }
   .page-header__wrap {
@@ -1640,6 +1640,9 @@ h1 {
   }
   .card__body-description {
     display: none;
+  }
+  .page-footer__content {
+    padding-bottom: 118px;
   }
   .team-header {
     height: 120px;
