@@ -587,6 +587,9 @@ h1 {
 .menu__link {
   display: block;
 }
+.menu__link:hover {
+  color: #f0145a;
+}
 
 .actions {
   display: -webkit-box;
@@ -1508,7 +1511,7 @@ h1 {
   .menu__list.active {
     display: block;
   }
-  .menu__link {
+  .menu__link:hover {
     margin: 20px 0;
   }
   .actions {

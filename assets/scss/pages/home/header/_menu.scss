@@ -100,7 +100,11 @@
 
   &__link {
     display: block;
+  }
 
+  &__link:hover {
+    color: $color-accent;
+  
     @include sm {
       margin: $gap 0;
     }
