@@ -338,7 +338,7 @@ template {
 /* md */
 /* sm */
 /* xs */
-.page-footer__container, .publications__container, .cases, .team, .services__container, .experience__container, .page-header__wrap {
+.team-main, .page-footer__container, .publications__container, .cases, .team, .services__container, .experience__container, .page-header__wrap {
   max-width: 1360px;
   margin-left: auto;
   margin-right: auto;
@@ -346,7 +346,7 @@ template {
   padding-right: 20px;
 }
 
-.content__header-title, .employee__description-quote, .services__title {
+.members__header, .content__header-title, .employee__description-quote, .services__title {
   background: -o-linear-gradient(359.87deg, #F0145A 0.84%, #EF8080 99.96%);
   background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   -webkit-background-clip: text;
@@ -1043,6 +1043,9 @@ h1 {
   -webkit-column-gap: 40px;
      -moz-column-gap: 40px;
           column-gap: 40px;
+  -webkit-column-width: auto;
+     -moz-column-width: auto;
+          column-width: auto;
 }
 .content__button {
   position: absolute;
@@ -1068,7 +1071,6 @@ h1 {
 }
 
 .card {
-  max-width: 413px;
   border-radius: 8px;
   background-color: #ffffff;
   margin-bottom: 40px;
@@ -1168,6 +1170,115 @@ h1 {
   font-weight: 500;
   font-size: 16px;
   color: #b3b3ba;
+}
+
+.team-header {
+  height: 184px;
+  background: #ffffff;
+}
+.team-header::before, .team-header::after {
+  display: none;
+}
+.team-header a {
+  color: #b3b3ba;
+}
+.team-header .menu__link {
+  color: #24a3ff;
+}
+.team-header .menu__btn-row {
+  background-color: #323264;
+}
+.team-header .active-link {
+  color: #f0145a;
+  display: block;
+  width: 69px;
+  border-bottom: 2px solid #f0145a;
+}
+.team-header .page-header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.team-header .page-header__logo-picture {
+  height: 62px;
+  width: 155px;
+}
+.team-header .page-header__logo-slash,
+.team-header .page-header__logo-emblem {
+  height: 47px;
+}
+.team-header .page-header__logo-title {
+  font-size: 38px;
+  color: #323264;
+  margin: 0;
+}
+
+.team-main {
+  padding-top: 50px;
+}
+
+.members__header {
+  font-weight: 700;
+  font-size: 42px;
+  max-width: 864px;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+.members__gread {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.member {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 413px;
+}
+.member__photo {
+  max-width: 413px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.member__photo-pic {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.member__description {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: auto 32px;
+  grid-template-areas: "dname dbutton" "dposition dbutton";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 5px;
+}
+.member__description-name {
+  font-weight: 500;
+  font-size: 18px;
+  color: #323264;
+  grid-area: dname;
+}
+.member__description-position {
+  font-size: 16px;
+  color: #b3b3ba;
+  grid-area: dposition;
+}
+.member__description-button {
+  height: 32px;
+  width: 32px;
+  grid-area: dbutton;
 }
 @media (min-width: 576px) {
   .publications {
@@ -1274,6 +1385,10 @@ h1 {
     width: -moz-max-content;
     width: max-content;
   }
+  .team-header .page-header__wrap {
+    grid-template-areas: "logo actions" "logo menu";
+    padding-top: 50px;
+  }
 }
 @media (min-width: 1280px) {
   .services {
@@ -1345,6 +1460,21 @@ h1 {
     -webkit-column-count: 2;
        -moz-column-count: 2;
             column-count: 2;
+  }
+  .team-header .page-header__wrap {
+    grid-template-areas: "actions actions" "logo menu";
+    padding-top: 20px;
+  }
+  .team-header .page-header__logo-picture {
+    height: 31px;
+    width: auto;
+  }
+  .team-header .page-header__logo-slash,
+.team-header .page-header__logo-emblem {
+    height: 24px;
+  }
+  .team-header .page-header__logo-title {
+    font-size: 19px;
   }
 }
 @media (max-width: 767.8px) {
@@ -1486,5 +1616,15 @@ h1 {
   }
   .card__body-description {
     display: none;
+  }
+  .team-header {
+    height: 120px;
+  }
+  .team-main {
+    padding-top: 10px;
+  }
+  .members__header {
+    font-size: 32px;
+    padding-bottom: 40px;
   }
 }

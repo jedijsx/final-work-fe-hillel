@@ -1,0 +1,12 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.team-main {
+  padding-top: 50px;
+
+  @include xs {
+    padding-top: 10px;
+  }
+
+  @extend %container;
+}
