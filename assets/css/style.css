@@ -377,6 +377,16 @@ template {
   background-color: #e6e6f0;
 }
 
+.separator {
+  width: 100%;
+  height: 4px;
+  background-color: #e6e6f0;
+}
+
+.img-hide .card__img {
+  display: none;
+}
+
 *,
 ::before,
 ::after {
@@ -1008,18 +1018,8 @@ h1 {
   background-color: #f5f5fa;
   padding-top: 40px;
   padding-bottom: 100px;
-  max-height: 872px;
   overflow: hidden;
   position: relative;
-}
-.publications::after {
-  z-index: 1;
-  position: absolute;
-  inset: 70% 0 0 0;
-  content: "";
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 245, 250, 0)), color-stop(86.5%, #F5F5FA));
-  background: -o-linear-gradient(top, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
-  background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
 }
 
 .content__header {
@@ -1028,7 +1028,6 @@ h1 {
 .content__header-link {
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.2;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #24a3ff;
@@ -1036,7 +1035,6 @@ h1 {
 .content__header-title {
   font-weight: 700;
   font-size: 42px;
-  line-height: 1.2;
 }
 .content__cards {
   -webkit-column-count: 3;
@@ -1109,10 +1107,6 @@ h1 {
   color: #000000;
 }
 
-.n-img .card__img {
-  display: none;
-}
-
 .page-footer {
   background-color: #f5f5fa;
 }
@@ -1174,6 +1168,20 @@ h1 {
   font-weight: 500;
   font-size: 16px;
   color: #b3b3ba;
+}
+@media (min-width: 576px) {
+  .publications {
+    max-height: 872px;
+  }
+  .publications::after {
+    z-index: 1;
+    position: absolute;
+    inset: 70% 0 0 0;
+    content: "";
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(245, 245, 250, 0)), color-stop(86.5%, #F5F5FA));
+    background: -o-linear-gradient(top, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
+    background: linear-gradient(180deg, rgba(245, 245, 250, 0) 0%, #F5F5FA 86.5%);
+  }
 }
 @media (min-width: 768px) {
   .page-header::before {
@@ -1447,6 +1455,9 @@ h1 {
   }
 }
 @media (max-width: 575.8px) {
+  .xs-hide {
+    display: none;
+  }
   .case__description-header {
     font-size: 18px;
   }
@@ -1456,9 +1467,24 @@ h1 {
   .clients__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .content__header {
+    padding-bottom: 20px;
+  }
+  .content__header-title {
+    font-size: 32px;
+  }
   .content__cards {
     -webkit-column-count: 1;
        -moz-column-count: 1;
             column-count: 1;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+  .card__body-date {
+    margin-bottom: 0;
+  }
+  .card__body-description {
+    display: none;
   }
 }

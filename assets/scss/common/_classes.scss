@@ -17,3 +17,22 @@
   height: 4px;
   background-color: $color-separator;
 }
+
+.separator {
+  width: 100%;
+  height: 4px;
+  background-color: $color-separator;
+}
+
+.xs-hide {
+  @include xs {
+    display: none;
+  }
+}
+
+
+.img-hide {
+  .card__img{
+    display: none;
+  }
+}

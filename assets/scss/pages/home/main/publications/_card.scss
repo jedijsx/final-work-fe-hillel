@@ -8,6 +8,10 @@
   margin-bottom: 40px;
   overflow: hidden;
 
+  @include xs {
+    margin-bottom: 20px;
+  }
+
   &__img {
     display: block;
 
@@ -35,6 +39,10 @@
       color: $color-text;
       margin-top: 10px;
       margin-bottom: 20px;
+
+      @include xs {
+        margin-bottom: 0;
+      }
     }
 
     &-description {
@@ -42,12 +50,11 @@
       font-size: 16px;
       line-height: 22px;
       color: $color-black;
+
+      @include xs {
+        display: none;
+      }
     }
   }
 }
 
-.n-img {
-  .card__img{
-    display: none;
-  }
-}

@@ -6,10 +6,13 @@
   &__header {
     padding-bottom: 40px;
 
+    @include xs {
+      padding-bottom: 20px;
+    }
+
     &-link {
       font-weight: 700;
       font-size: 14px;
-      line-height: 1.2;
       letter-spacing: 1px;
       text-transform: uppercase;
       color: $color-active;
@@ -20,7 +23,10 @@
 
       font-weight: 700;
       font-size: 42px;
-      line-height: 1.2;
+
+      @include xs {
+        font-size: 32px;
+      }
     }
   }
 
