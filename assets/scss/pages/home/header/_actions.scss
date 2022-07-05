@@ -37,10 +37,18 @@
     }
   }
 
+  &__language-link:hover {
+    background-color: $color-accent;
+  }
+
   &__locations {
     @include sm {
       display: none;
     }
+  }
+
+  &__location-url:hover {
+    color: $color-accent;
   }
 
   &__phone-url {
@@ -48,9 +56,22 @@
     white-space: nowrap;
   }
 
+  &__phone-url:hover {
+    color: $color-accent;
+  }
+
   &__socials {
     @include sm {
       display: none;
     }
+  }
+
+  &__social-image {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  &__social-image:hover {
+    color: $color-active;
   }
 }

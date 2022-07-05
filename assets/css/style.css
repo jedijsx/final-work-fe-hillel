@@ -619,9 +619,25 @@ h1 {
   background-color: #f0145a;
   color: #ffffff;
 }
+.actions__language-link:hover {
+  background-color: #f0145a;
+}
+.actions__location-url:hover {
+  color: #f0145a;
+}
 .actions__phone-url {
   font-weight: 700;
   white-space: nowrap;
+}
+.actions__phone-url:hover {
+  color: #f0145a;
+}
+.actions__social-image {
+  font-size: 24px;
+  margin: 0;
+}
+.actions__social-image:hover {
+  color: #24a3ff;
 }
 
 .experience {
