@@ -1286,6 +1286,7 @@ h1 {
   font-size: 16px;
   color: #b3b3ba;
   grid-area: dposition;
+  margin: 0;
 }
 .member__description-button {
   height: 32px;
@@ -1664,19 +1665,23 @@ h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-column-gap: 20px;
-       -moz-column-gap: 20px;
-            column-gap: 20px;
+    -webkit-column-gap: 18px;
+       -moz-column-gap: 18px;
+            column-gap: 18px;
   }
   .member__photo {
     max-width: 158px;
   }
   .member__description {
+    grid-template-columns: 1fr;
     grid-template-areas: "dname" "dposition" "dbutton";
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: end;
-    row-gap: 0;
-    padding-top: 60px;
+    row-gap: 2px;
+    padding-top: 80px;
+  }
+  .member__description-name {
+    font-size: 17px;
   }
 }

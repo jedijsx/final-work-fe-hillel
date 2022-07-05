@@ -9,7 +9,7 @@
 
   @include xs {
     flex-direction: row;
-    column-gap: 20px;
+    column-gap: 18px;
   }
 
   &__photo {
@@ -36,10 +36,11 @@
     row-gap: 5px;
 
     @include xs {
+      grid-template-columns: 1fr;
       grid-template-areas: "dname" "dposition" "dbutton";
       align-items: end;
-      row-gap: 0;
-      padding-top: 60px;
+      row-gap: 2px;
+      padding-top: 80px;
     }
 
     &-name {
@@ -47,12 +48,17 @@
       font-size: 18px;
       color: $color-main;
       grid-area: dname;
+      
+      @include xs {
+        font-size: 17px;
+      }
     }
 
     &-position {
       font-size: 16px;
       color: $color-text;
       grid-area: dposition;
+      margin: 0;
     }
 
     &-button {
