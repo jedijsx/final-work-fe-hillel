@@ -1173,6 +1173,7 @@ h1 {
   font-weight: 500;
   font-size: 16px;
   color: #b3b3ba;
+  text-align: right;
 }
 
 .team-header {
@@ -1594,13 +1595,17 @@ h1 {
             flex-direction: column;
     gap: 20px;
   }
+  .page-footer__content {
+    padding-bottom: 118px;
+  }
   .page-footer__content-nav {
-    -ms-flex-preferred-size: 120px;
-        flex-basis: 120px;
+    -ms-flex-preferred-size: 200px;
+        flex-basis: 200px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    row-gap: 18px;
   }
   .page-footer__content-copy {
     margin: auto 40px;
@@ -1640,9 +1645,6 @@ h1 {
   }
   .card__body-description {
     display: none;
-  }
-  .page-footer__content {
-    padding-bottom: 118px;
   }
   .team-header {
     height: 120px;

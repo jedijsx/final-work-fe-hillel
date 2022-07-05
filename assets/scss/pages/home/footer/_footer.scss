@@ -19,7 +19,7 @@
       gap: $gap;
     }
 
-    @include xs {
+    @include sm {
       padding-bottom: 118px;
     }
 
@@ -32,8 +32,9 @@
       align-items: center;
       
       @include sm {
-        flex-basis: 120px;
+        flex-basis: 200px;
         flex-direction: column;
+        row-gap: 18px;
       }
     }
 
@@ -74,6 +75,7 @@
       font-weight: 500;
       font-size: 16px;
       color: $color-text;
+      text-align: right;
 
       @include sm {
         margin: auto 40px;
