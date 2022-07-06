@@ -515,6 +515,9 @@ h1 {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+.page-header__button:hover {
+  opacity: 0.4;
+}
 
 .menu {
   -ms-flex-item-align: center;
@@ -621,6 +624,7 @@ h1 {
 }
 .actions__language-link:hover {
   background-color: #f0145a;
+  color: #ffffff;
 }
 .actions__location-url:hover {
   color: #f0145a;
@@ -759,6 +763,9 @@ h1 {
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
 }
+.services__subheader-link:hover {
+  opacity: 0.4;
+}
 .services__subheader-arrow {
   width: 12px;
   height: 12px;
@@ -846,6 +853,9 @@ h1 {
   letter-spacing: 1px;
   color: #24a3ff;
 }
+.employee__subheader-link:hover {
+  opacity: 0.4;
+}
 .employee__subheader-arrow {
   width: 12px;
   height: 12px;
@@ -922,6 +932,9 @@ h1 {
   height: 57px;
   padding: 20px;
 }
+.case__one-header:hover {
+  background-color: #ededf7;
+}
 .case__one-link {
   font-weight: 700;
   font-size: 14px;
@@ -941,6 +954,9 @@ h1 {
   display: -ms-flexbox;
   display: flex;
 }
+.case__two:hover {
+  background-color: #ededf7;
+}
 .case__three {
   background-color: #f5f5fa;
   -ms-flex-preferred-size: 433px;
@@ -951,6 +967,9 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+.case__three:hover {
+  background-color: #ededf7;
 }
 .case__four {
   -ms-flex-preferred-size: 320px;
@@ -1013,6 +1032,10 @@ h1 {
   height: 198px;
 }
 
+.fr:hover {
+  background-color: #ededf7;
+}
+
 .clients__header {
   font-weight: 700;
   font-size: 14px;
@@ -1032,6 +1055,9 @@ h1 {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.clients__grid-logo:hover {
+  opacity: 0.4;
+}
 
 .publications {
   background-color: #f5f5fa;
@@ -1050,6 +1076,9 @@ h1 {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #24a3ff;
+}
+.content__header-link:hover {
+  opacity: 0.4;
 }
 .content__header-title {
   font-weight: 700;
@@ -1076,7 +1105,7 @@ h1 {
           transform: translateX(-50%);
 }
 .content__button-btn {
-  background: #24A3FF;
+  background: #24a3ff;
   -webkit-box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
           box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
   border-radius: 12px;
@@ -1087,6 +1116,9 @@ h1 {
   text-align: center;
   padding: 16px 16px;
   width: 250px;
+}
+.content__button-btn:hover {
+  background: #0085ff;
 }
 
 .card {
@@ -1112,6 +1144,9 @@ h1 {
   font-size: 18px;
   color: #24a3ff;
 }
+.card__body-title:hover {
+  color: #f0145a;
+}
 .card__body-date {
   font-weight: 700;
   font-size: 12px;
@@ -1126,6 +1161,11 @@ h1 {
   font-size: 16px;
   line-height: 22px;
   color: #000000;
+}
+
+.card:hover {
+  -webkit-box-shadow: 0px 0px 24px #cacadb;
+          box-shadow: 0px 0px 24px #cacadb;
 }
 
 .page-footer {
@@ -1170,20 +1210,32 @@ h1 {
   text-transform: uppercase;
   color: #24a3ff;
 }
+.page-footer__content-link:hover {
+  color: #f0145a;
+}
 .page-footer__content-social {
-  height: 38px;
-  width: 38px;
+  font-size: 38px;
+  color: #24a3ff;
   margin: 0;
+}
+.page-footer__content-social:hover {
+  color: #f0145a;
 }
 .page-footer__content-phone {
   font-weight: 700;
   font-size: 16px;
   color: #46466e;
 }
+.page-footer__content-phone:hover {
+  color: #f0145a;
+}
 .page-footer__content-email {
   font-weight: 700;
   font-size: 16px;
   color: #24a3ff;
+}
+.page-footer__content-email:hover {
+  color: #f0145a;
 }
 .page-footer__content-copy {
   font-weight: 500;
@@ -1204,6 +1256,9 @@ h1 {
 }
 .team-header .menu__link {
   color: #24a3ff;
+}
+.team-header .menu__link:hover {
+  color: #f0145a;
 }
 .team-header .menu__btn-row {
   background-color: #323264;
@@ -1293,10 +1348,16 @@ h1 {
   row-gap: 5px;
 }
 .member__description-name {
+  grid-area: dname;
+}
+.member__description-link {
   font-weight: 500;
   font-size: 18px;
   color: #323264;
-  grid-area: dname;
+  margin: 0;
+}
+.member__description-link:hover {
+  color: #f0145a;
 }
 .member__description-position {
   font-size: 16px;
@@ -1308,6 +1369,9 @@ h1 {
   height: 32px;
   width: 32px;
   grid-area: dbutton;
+}
+.member__description-button:hover {
+  opacity: 0.5;
 }
 
 .team-footer {
@@ -1697,7 +1761,7 @@ h1 {
     row-gap: 2px;
     padding-top: 80px;
   }
-  .member__description-name {
+  .member__description-link {
     font-size: 17px;
   }
 }

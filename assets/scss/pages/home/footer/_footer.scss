@@ -53,10 +53,18 @@
       color: $color-active;
     }
 
+    &-link:hover {
+      color: $color-accent;
+    }
+
     &-social {
-      height: 38px;
-      width: 38px;
+      font-size: 38px;
+      color: $color-active;
       margin: 0;
+    }
+
+    &-social:hover {
+      color: $color-accent;
     }
 
     &-phone {
@@ -65,10 +73,18 @@
       color: $color-main-alt;
     }
 
+    &-phone:hover {
+      color: $color-accent;
+    }
+
     &-email {
       font-weight: 700;
       font-size: 16px;
       color: $color-active;
+    }
+
+    &-email:hover {
+      color: $color-accent;
     }
 
     &-copy {

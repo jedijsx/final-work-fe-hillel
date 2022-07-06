@@ -100,4 +100,8 @@
     cursor: pointer;
     transform: translateX(-50%);
   }
+
+  &__button:hover {
+    opacity: 0.4;
+  }
 }

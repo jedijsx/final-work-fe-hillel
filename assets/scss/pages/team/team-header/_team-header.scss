@@ -34,6 +34,10 @@
     color: $color-active;
   }
 
+  .menu__link:hover {
+    color: $color-accent;
+  }
+  
   .menu__btn-row {
     background-color: $color-main;
   }

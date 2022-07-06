@@ -29,6 +29,10 @@
       font-size: 18px;
       color: $color-active;
     }
+
+    &-title:hover {
+      color: $color-accent;
+    }
   
     &-date {
       font-weight: 700;
@@ -57,3 +61,6 @@
   }
 }
 
+.card:hover {
+  box-shadow: 0px 0px 24px $color-card-shadow2;
+}

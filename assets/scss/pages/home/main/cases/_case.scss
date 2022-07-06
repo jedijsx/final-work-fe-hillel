@@ -23,6 +23,10 @@
       padding: 20px;
     }
 
+    &-header:hover {
+      background-color: $color-bg-alt;
+    }
+
     &-link {
       font-weight: 700;
       font-size: 14px;
@@ -40,11 +44,19 @@
     display: flex;
   }
 
+  &__two:hover {
+    background-color: $color-bg-alt;
+  }
+
   &__three {
     background-color: $color-bg;
     flex-basis: 433px;
     flex-grow: 1;
     display: flex;
+  }
+
+  &__three:hover {
+    background-color: $color-bg-alt;
   }
 
   &__four {
@@ -106,4 +118,8 @@
   @include xs {
     height: $size-small;
   }
+}
+
+.fr:hover {
+  background-color: $color-bg-alt;
 }
